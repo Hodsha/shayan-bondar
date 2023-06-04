@@ -1,0 +1,305 @@
+.nav-menu:before,
+.nav-menu:after {
+    content: "";
+    display: table;
+}
+
+.nav-menu:after {
+    clear: both;
+}
+
+.nav-menu {
+    zoom: 1;
+}
+
+nav {
+    /* padding: 50px; */
+}
+
+.menu,
+.sumbenu {
+    margin: 100px;
+    width: 100%;
+    list-style: none;
+}
+
+.menu {
+    margin: 0px auto;
+    /* width: 800px; */
+    width: fit-content;
+}
+
+.menu>li {
+    background-image: linear-gradient(45deg,
+    hsl(240deg 100% 18%) 0%,
+    hsl(265deg 100% 17%) 14%,
+    hsl(277deg 100% 16%) 28%,
+    hsl(288deg 100% 15%) 42%,
+    hsl(300deg 100% 14%) 54%,
+    hsl(311deg 100% 16%) 66%,
+    hsl(320deg 100% 17%) 76%,
+    hsl(328deg 100% 19%) 84%,
+    hsl(336deg 100% 20%) 90%,
+    hsl(344deg 100% 21%) 96%,
+    hsl(0deg 100% 22%) 100%);
+    float: left;
+    position: relative;
+    transform: skew(25deg);
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+.menu li:hover {
+    background: #ff0000;
+}
+
+.menu>li>a {
+    padding: 1em 2em;
+}
+
+.menu-items {
+    position: absolute;
+    width: 200px;
+    margin-left: -100px;
+    transform: skewX(-25deg);
+    transform-origin: left top;
+}
+
+.menu-item1 {
+    left: 100%;
+}
+
+.menu-item2 {
+    left: 100%;
+}
+
+.menu-item3 {
+    left: 83%;
+}
+
+.menu-items li {
+    background-image: linear-gradient(45deg,
+    hsl(240deg 100% 18%) 0%,
+    hsl(265deg 100% 17%) 14%,
+    hsl(277deg 100% 16%) 28%,
+    hsl(288deg 100% 15%) 42%,
+    hsl(300deg 100% 14%) 54%,
+    hsl(311deg 100% 16%) 66%,
+    hsl(320deg 100% 17%) 76%,
+    hsl(328deg 100% 19%) 84%,
+    hsl(336deg 100% 20%) 90%,
+    hsl(344deg 100% 21%) 96%,
+    hsl(0deg 100% 22%) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-items>li {
+    padding: 1em 2em;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+.menu-items>li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 9);
+}
+
+.menu-items>li:nth-child(odd) {
+    transform: skewX(25deg);
+}
+
+.menu-items>li:nth-child(odd)>a {
+    transform: skewX(25deg);
+}
+
+.menu-items>li:nth-child(odd)::after {
+    transform: skewX(25deg);
+}
+
+.menu-items>li:nth-child(even) {
+    transform: skewX(25deg) translateX(0);
+}
+
+/* .menu-item>li:nth-child(even)>a {
+  transform: skewX(-25deg);
+} */
+
+.menu-items>li:nth-child(even)::after {
+    left: -50%;
+    transform: skewx(25deg) rotate(3deg);
+}
+
+.menu-items,
+.menu-items li {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-items li {
+    transition: .2s ease transform;
+}
+
+.menu>li:hover .menu-items,
+.menu>li:hover .menu-items li {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu>li:hover .menu-items li:nth-child(even) {
+    transform: skewX(25deg) translateX(15px);
+}
+
+.menu>li:hover .menu-items li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(-15px);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}
+
+//Sidebar Responsive
+.sidebar {
+    // background-image: linear-gradient(45deg,
+    //         hsl(0deg 0% 0%) 0%,
+    //         hsl(249deg 100% 6%) 11%,
+    //         hsl(252deg 94% 7%) 22%,
+    //         hsl(251deg 80% 7%) 33%,
+    //         hsl(250deg 68% 8%) 44%,
+    //         hsl(248deg 59% 9%) 56%,
+    //         hsl(246deg 51% 10%) 67%,
+    //         hsl(243deg 46% 11%) 78%,
+    //         hsl(241deg 42% 12%) 89%,
+    //         hsl(240deg 40% 12%) 100%);
+    background-image: linear-gradient(45deg,
+            hsl(240deg 100% 18%) 0%,
+            hsl(265deg 100% 17%) 14%,
+            hsl(277deg 100% 16%) 28%,
+            hsl(288deg 100% 15%) 42%,
+            hsl(300deg 100% 14%) 54%,
+            hsl(311deg 100% 16%) 66%,
+            hsl(320deg 100% 17%) 76%,
+            hsl(328deg 100% 19%) 84%,
+            hsl(336deg 100% 20%) 90%,
+            hsl(344deg 100% 21%) 96%,
+            hsl(0deg 100% 22%) 100%);
+    height: 100%;
+    width: 12rem;
+    z-index: 1;
+    margin-left: -225px;
+    position: absolute;
+    transition: all 0.80s;
+    font-size: 22px;
+    display: none;
+
+    &.is-active {
+        margin-left: 0;
+    }
+}
+
+.hamburger {
+    transform: rotate(-90deg);
+    z-index: 1;
+    position: absolute;
+    transition: all 0.50s;
+    cursor: pointer;
+    margin: 10px 20px;
+    display: none;
+}
+
+.hamburger:hover {
+    transform: rotate(0);
+
+}
+
+.items {
+    color: white;
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.item:hover {
+    color: red;
+}
+
+.subitems {
+    list-style: none;
+
+}
+
+.subitem {
+    margin-top: 10px;
+
+}
+
+.subitem:hover {
+    color: red;
+}
+
+.subitem a {
+    color: white;
+    text-decoration: none;
+}
+
+// .subitem a:hover{
+//     color: red;
+// }
+
+.closeBtn {
+    color: white;
+    cursor: pointer;
+    margin: 10px 140px
+}
+
+.icons {
+    float: left;
+    margin-right: 5px;
+
+}
+
+.sub_icons {
+    float: left;
+    margin-left: 20px;
+    margin-right: 5px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: block;
+    }
+    .hamburger{
+        display: block;
+    }
+}
