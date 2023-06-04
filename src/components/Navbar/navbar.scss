@@ -1,180 +1,3 @@
-.nav-menu:before,
-.nav-menu:after {
-    content: "";
-    display: table;
-}
-
-.nav-menu:after {
-    clear: both;
-}
-
-.nav-menu {
-    zoom: 1;
-}
-
-nav {
-    /* padding: 50px; */
-}
-
-.menu,
-.sumbenu {
-    margin: 100px;
-    width: 100%;
-    list-style: none;
-}
-
-.menu {
-    margin: 0px auto;
-    /* width: 800px; */
-    width: fit-content;
-}
-
-.menu>li {
-    background-image: linear-gradient(45deg,
-    hsl(240deg 100% 18%) 0%,
-    hsl(265deg 100% 17%) 14%,
-    hsl(277deg 100% 16%) 28%,
-    hsl(288deg 100% 15%) 42%,
-    hsl(300deg 100% 14%) 54%,
-    hsl(311deg 100% 16%) 66%,
-    hsl(320deg 100% 17%) 76%,
-    hsl(328deg 100% 19%) 84%,
-    hsl(336deg 100% 20%) 90%,
-    hsl(344deg 100% 21%) 96%,
-    hsl(0deg 100% 22%) 100%);
-    float: left;
-    position: relative;
-    transform: skew(25deg);
-}
-
-.menu a {
-    display: block;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: Arial, Helvetica;
-    font-size: 14px;
-}
-
-.menu li:hover {
-    background: #ff0000;
-}
-
-.menu>li>a {
-    padding: 1em 2em;
-}
-
-.menu-items {
-    position: absolute;
-    width: 200px;
-    margin-left: -100px;
-    transform: skewX(-25deg);
-    transform-origin: left top;
-}
-
-.menu-item1 {
-    left: 100%;
-}
-
-.menu-item2 {
-    left: 100%;
-}
-
-.menu-item3 {
-    left: 83%;
-}
-
-.menu-items li {
-    background-image: linear-gradient(45deg,
-    hsl(240deg 100% 18%) 0%,
-    hsl(265deg 100% 17%) 14%,
-    hsl(277deg 100% 16%) 28%,
-    hsl(288deg 100% 15%) 42%,
-    hsl(300deg 100% 14%) 54%,
-    hsl(311deg 100% 16%) 66%,
-    hsl(320deg 100% 17%) 76%,
-    hsl(328deg 100% 19%) 84%,
-    hsl(336deg 100% 20%) 90%,
-    hsl(344deg 100% 21%) 96%,
-    hsl(0deg 100% 22%) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.menu-items>li {
-    padding: 1em 2em;
-    display: block;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: Arial, Helvetica;
-    font-size: 14px;
-}
-
-.menu-items>li::after {
-    content: '';
-    position: absolute;
-    top: -125%;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 9);
-}
-
-.menu-items>li:nth-child(odd) {
-    transform: skewX(25deg);
-}
-
-.menu-items>li:nth-child(odd)>a {
-    transform: skewX(25deg);
-}
-
-.menu-items>li:nth-child(odd)::after {
-    transform: skewX(25deg);
-}
-
-.menu-items>li:nth-child(even) {
-    transform: skewX(25deg) translateX(0);
-}
-
-/* .menu-item>li:nth-child(even)>a {
-  transform: skewX(-25deg);
-} */
-
-.menu-items>li:nth-child(even)::after {
-    left: -50%;
-    transform: skewx(25deg) rotate(3deg);
-}
-
-.menu-items,
-.menu-items li {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.menu-items li {
-    transition: .2s ease transform;
-}
-
-.menu>li:hover .menu-items,
-.menu>li:hover .menu-items li {
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu>li:hover .menu-items li:nth-child(even) {
-    transform: skewX(25deg) translateX(15px);
-}
-
-.menu>li:hover .menu-items li:nth-child(odd) {
-    transform: skewX(-25deg) translateX(-15px);
-}
-
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-}
-
 //Sidebar Responsive
 .sidebar {
     // background-image: linear-gradient(45deg,
@@ -189,25 +12,24 @@ nav {
     //         hsl(241deg 42% 12%) 89%,
     //         hsl(240deg 40% 12%) 100%);
     background-image: linear-gradient(45deg,
-            hsl(240deg 100% 18%) 0%,
-            hsl(265deg 100% 17%) 14%,
-            hsl(277deg 100% 16%) 28%,
-            hsl(288deg 100% 15%) 42%,
-            hsl(300deg 100% 14%) 54%,
-            hsl(311deg 100% 16%) 66%,
-            hsl(320deg 100% 17%) 76%,
-            hsl(328deg 100% 19%) 84%,
-            hsl(336deg 100% 20%) 90%,
-            hsl(344deg 100% 21%) 96%,
-            hsl(0deg 100% 22%) 100%);
+            hsl(0deg 100% 17%) 0%,
+            hsl(353deg 100% 18%) 0%,
+            hsl(346deg 100% 18%) -1%,
+            hsl(340deg 100% 18%) 0%,
+            hsl(333deg 100% 18%) 0%,
+            hsl(324deg 100% 17%) 2%,
+            hsl(311deg 100% 16%) 5%,
+            hsl(293deg 100% 15%) 9%,
+            hsl(272deg 100% 18%) 19%,
+            hsl(240deg 100% 20%) 99%);
     height: 100%;
-    width: 12rem;
+    width: 15rem;
     z-index: 1;
-    margin-left: -225px;
-    position: absolute;
+    margin-left: -240px;
+    position: fixed;
     transition: all 0.80s;
     font-size: 22px;
-    display: none;
+    display: block;
 
     &.is-active {
         margin-left: 0;
@@ -221,7 +43,12 @@ nav {
     transition: all 0.50s;
     cursor: pointer;
     margin: 10px 20px;
-    display: none;
+    display: block;
+    color: black;
+
+    &.dark {
+        color: white;
+    }
 }
 
 .hamburger:hover {
@@ -270,12 +97,13 @@ nav {
 .closeBtn {
     color: white;
     cursor: pointer;
-    margin: 10px 140px
+    margin: 10px 180px
 }
 
 .icons {
     float: left;
     margin-right: 5px;
+    margin-top: 3px;
 
 }
 
@@ -283,6 +111,7 @@ nav {
     float: left;
     margin-left: 20px;
     margin-right: 5px;
+    margin-top: 3px;
 
 }
 
@@ -295,11 +124,11 @@ nav {
     color: red;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        display: block;
-    }
-    .hamburger{
-        display: block;
-    }
-}
+// @media (max-width: 768px) {
+//     .sidebar {
+//         display: block;
+//     }
+//     .hamburger{
+//         display: block;
+//     }
+// }

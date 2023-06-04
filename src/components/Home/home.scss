@@ -1,0 +1,221 @@
+/* ENTIRE DOCUMENT */
+#bodyStyle {
+    font-size: 62.5%;
+    font-family: "Muli", "Helvetica Neue", "Arial", "sans-serif";
+    font-weight: 300;
+}
+
+/* BODY */
+section {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+
+.gradient {
+    padding: 10em;
+}
+
+
+h2 {
+
+    font-size: 4em;
+}
+
+
+.superscription {
+
+    font-style: italic;
+    font-size: 2.5em;
+}
+
+
+section p {
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+
+.space-maker {
+    margin-bottom: 3em;
+}
+
+#myPicture {
+    margin-left: 90px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.skill-container {
+    width: 100%;
+    background: #8d8d8d;
+    border-radius: 25px;
+}
+
+#skillbar_sets_618c4f9c7cbb p {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.skill {
+
+    text-align: right;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.html {
+    width: 65%;
+    background-color: #4caf50;
+}
+
+.css {
+    width: 60%;
+    background-color: #2196f3;
+}
+
+.js {
+    width: 75%;
+    background-color: #f47c36;
+}
+
+.react {
+    width: 80%;
+    background-color: #1900ff;
+}
+
+.sharepoint {
+    width: 80%;
+    background-color: #07b9ff;
+}
+
+.spfx {
+    width: 80%;
+    background-color: #027a83;
+}
+
+.restAPI {
+    width: 75%;
+    background-color: #623a96;
+}
+
+.mysql {
+    width: 40%;
+    background-color: #05442a;
+}
+
+.csharp {
+    width: 45%;
+    background-color: #290169;
+}
+
+
+.myBild {
+    height: 300px;
+    width: 90%;
+    display: block;
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: none;
+    border: none;
+    z-index: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.carousel-control-prev {
+    left: -5%;
+}
+
+.carousel-control-next {
+    right: -5%;
+}
+
+.carousel-indicators {
+    bottom: -45px;
+    z-index: 0;
+}
+
+/* Hide the arrows on small screens */
+
+@media only screen and (max-width: 760px) {
+    .container {
+        width: 96%;
+    }
+}
+
+/* Responsive design */
+@media only screen and (max-width: 500px) {
+
+    /* HEADER */
+    .masthead {
+        padding: 1em;
+    }
+
+    .masthead-intro {
+        font-size: 1.5rem;
+    }
+
+    .masthead-heading {
+        font-size: 4rem;
+    }
+
+    /* BODY */
+    .gradient {
+        padding: 5em;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .superscription {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    .content-footer {
+        padding: 4em;
+    }
+
+    .social>li {
+        /* Layout declarations */
+        display: block;
+        margin-right: 0;
+    }
+
+    a {
+        line-height: 3em;
+    }
+
+    .content-footer p a {
+        line-height: 0;
+    }
+
+    #myPicture {
+        margin-left: 20px;
+        text-align: center;
+
+    }
+}
