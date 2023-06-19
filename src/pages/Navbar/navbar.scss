@@ -1,4 +1,3 @@
-//Sidebar Responsive
 .sidebar {
     // background-image: linear-gradient(45deg,
     //         hsl(0deg 0% 0%) 0%,
@@ -24,12 +23,11 @@
             hsl(240deg 100% 20%) 99%);
     height: 100%;
     width: 15rem;
-    z-index: 1;
-    margin-left: -240px;
+    z-index: 999;
+    margin-left: -15rem;
     position: fixed;
     transition: all 0.80s;
     font-size: 22px;
-    display: block;
 
     &.is-active {
         margin-left: 0;
@@ -43,8 +41,6 @@
     transition: all 0.50s;
     cursor: pointer;
     margin: 10px 20px;
-    display: block;
-    color: black;
 
     &.dark {
         color: white;
@@ -60,7 +56,7 @@
     color: white;
     cursor: pointer;
     list-style: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
 }
 
 .item {
@@ -68,7 +64,7 @@
 }
 
 .item:hover {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .subitems {
@@ -78,11 +74,12 @@
 
 .subitem {
     margin-top: 10px;
+    margin-left: 10px;
 
 }
 
 .subitem:hover {
-    color: red;
+    color: rgb(148, 28, 28);
 }
 
 .subitem a {
@@ -102,17 +99,14 @@
 
 .icons {
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-top: 3px;
 
 }
 
 .sub_icons {
     float: left;
-    margin-left: 20px;
-    margin-right: 5px;
-    margin-top: 3px;
-
+    margin: 5px 10px 0px 20px;
 }
 
 .link {
@@ -124,11 +118,11 @@
     color: red;
 }
 
-// @media (max-width: 768px) {
-//     .sidebar {
-//         display: block;
-//     }
-//     .hamburger{
-//         display: block;
-//     }
-// }
+.arrow{
+    display: inline;
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+
+}

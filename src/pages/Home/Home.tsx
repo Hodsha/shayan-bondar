@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import './home.scss';
-import Skillbar from './Skillbar-Module/Skillbar';
+
 
 export default function Home() {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
     return (
-        <div className={`${darkMode ? 'bg-black' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
+        <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
             <div id="bodyStyle" >
                 <div className="gradient">
                     <section>

@@ -1,0 +1,57 @@
+.boxcard {
+  height: 800px;
+  width: 900px;
+  margin: auto;
+  padding-top: 250px;
+}
+
+.movie_container {
+  margin: auto;
+  width: 900px;
+  height: 500px;
+  padding: 10px;
+  background-color: #2c2a2a;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.arrows {
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 400px;
+}
+
+.movie-header {
+  color: white;
+  display: flex;
+
+  #movie_title {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+}
+
+.bild {
+  height: 120px;
+  width: 220px;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .boxcard {
+    padding-top: 5rem;
+    width: 400px;
+    height: 850px;
+  }
+
+  .movie_container {
+    width: 370px;
+    height: 700px;
+  }
+
+  .arrows {
+    margin-left: 160px;
+  }
+}

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './timeline.scss';
+import { ThemeContext } from '../../Hooks/ThemeContext';
 const TimeLine = () => {
+    const { theme } = useContext(ThemeContext);
+    const { darkMode } = theme;
     return (
-        <div>
+        <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode ? 'text-white' : 'text-black'} h-screen`}>
             <div className="container">
                 <br /><br /><br />
 
