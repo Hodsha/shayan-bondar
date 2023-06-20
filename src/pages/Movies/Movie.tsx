@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './movie.scss';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import CircularProgressBar from '../../components/Circular progress bar/CircularProgressBar';
@@ -7,6 +7,8 @@ import 'react-circular-progressbar/dist/styles.css';
 import Circular from '../../components/Circular progress bar/Circular';
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import { AiOutlineYoutube } from 'react-icons/ai';
+import { getMovie } from '../../Repository/myDataBase';
+import axios from 'axios';
 
 const Movie: React.FC = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -28,6 +30,15 @@ const Movie: React.FC = () => {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
 
+    const [data, setData] = useState<any>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3001/api/data')
+            .then((response) => response.json())
+            .then((data) => setData(data));
+            
+    }, []);
+    console.log(data);
     return (
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode ? 'text-white' : 'text-black'} h-screen`}>
             <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}`}>
