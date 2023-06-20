@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import './home.scss';
+import Loader from '../../components/Loader/Loader';
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     const { darkMode } = theme;
     return (
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
+            <Loader />
             <div id="bodyStyle" >
                 <div className="gradient">
                     <section>

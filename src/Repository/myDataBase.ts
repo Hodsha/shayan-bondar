@@ -1,13 +1,15 @@
 import axios from 'axios';
+import { IMovie } from '../entities/IMovie';
+
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://localhost:5173';
 
 
-
-export function getMovie(): Promise<any>{
-    return new Promise<any>((resolve, reject) => {
-        axios.get("http://localhost/3000").then((response: any) => {
-            resolve(response.data);
-        }).catch((error) => {
-            reject(error);
-        })
+export default function getMovie(): Promise<IMovie> {
+    return new Promise<any>(async (resolve, reject) => {
+       await fetch('http://localhost:5000/api/data')
+            .then((response) => response.json())
+            .then((data) => resolve(data));
+    }).catch((error) => {
+        console.log(error);
     })
 }
