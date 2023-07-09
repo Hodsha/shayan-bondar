@@ -6,17 +6,21 @@ import { ThemeProvider } from './Hooks/ThemeContext'
 import TimeLine from './pages/Updates/TimeLine'
 import Movie from './pages/Movies/Movie'
 import Home from './pages/Home/Home'
+import { I18nextProvider } from 'react-i18next'
+
 
 function App() {
   return (
     <ThemeProvider>
       <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Movie' element={<Movie />} />
-          <Route path='/TimeLine' element={<TimeLine />} />
-        </Routes>
+    
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Movie' element={<Movie />} />
+            <Route path='/TimeLine' element={<TimeLine />} />
+          </Routes>
+    
       </HashRouter>
     </ThemeProvider>
   )

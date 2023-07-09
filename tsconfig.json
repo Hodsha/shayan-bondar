@@ -10,7 +10,7 @@
     "allowJs": false,
     "skipLibCheck": true,
     "composite": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,8 +22,10 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-, "index.ts"  ],
+    "src",
+    "index.ts",
+    "loc/*.json"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

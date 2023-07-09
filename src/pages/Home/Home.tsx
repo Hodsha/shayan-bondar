@@ -9,7 +9,6 @@ export default function Home() {
     const { darkMode } = theme;
     return (
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
-            <Loader />
             <div id="bodyStyle" >
                 <div className="gradient">
                     <section>

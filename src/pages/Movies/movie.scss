@@ -16,7 +16,7 @@
   position: relative;
   display: block;
   width: 800px;
-  height: 500px;
+  height: 400px;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -39,7 +39,7 @@
     .movie_header {
       position: relative;
       padding: 25px;
-   
+      height: 25%;
       width: 100%;
 
       h1 {
@@ -76,11 +76,13 @@
       margin-right: 15px;
       box-shadow: 0 0 20px -10px rgba(190, 13, 13, 0.5);
       height: 100px;
+      width: 130px;
     }
 
     .movie_desc {
       padding: 20px;
       height: 15%;
+      width: 100%;
 
       .text {
         color: #cfd6e1;
@@ -163,42 +165,26 @@
 
 }
 
+.blur_back {
+  width: 80%;
+  background-position: -100% 10% !important;
+}
 
+.icon_design {
+  margin-top: 170px;
+  padding: 5px;
+  position: fixed;
+}
 
-//responsive
-
-@media screen and (min-width: 768px) {
-  .movie_header {
-    width: 90%;
-    height: 25%;
-  }
-
-  .movie_desc {
-    width: 100%;
-  }
-
-  .movieImg {
-    height: 125px;
-    width: 180px;
-  }
-
-  // .info_section {
-  //   background: #000000c0;
-  // }
-
-  .blur_back {
-    width: 80%;
-    background-position: -100% 10% !important;
-  }
-
-  .icon_design {
-    margin-top: 200px;
-    padding: 5px;
-  }
+.movie_youtube {
+  display: inherit;
+  margin-top: 15px;
+  display: flex;
+  position: fixed;
+  margin-left: 10rem;
 }
 
 //responsive Mobile
-
 @media screen and (max-width: 768px) {
   .movie_container {
     padding-top: 10px;
@@ -208,8 +194,7 @@
   .movie_card {
     width: 95%;
     margin: 70px auto;
-    min-height: 550px;
-    height: 650px;
+    height: 500px;
 
     #movie_title {
       font-size: 1.0rem;
@@ -238,8 +223,11 @@
     margin-top: -50px;
   }
 
-  .icon_design {
-    margin-top: 470px;
+  .movie_youtube {
+    margin-top: 15px;
+    display: flex;
+    position: fixed;
+    margin-left: 150px;
   }
 
   // #synopsisText {
@@ -266,18 +254,19 @@
     display: inline-grid;
   }
 
-  #icon_design_position {
-    margin-top: -120px;
+  .icon_design {
+    margin-top: 220px;
+    position: fixed;
   }
 
   .type {
 
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
 #backgroundshadow {
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  box-shadow: 0px 0px 1500px -1px rgba(255, 51, 0, 0.5);
 
   &:hover {
     box-shadow: 0px 0px 120px -55px rgba(43, 71, 231, 0.5);

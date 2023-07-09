@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState, useTransition } from 'react';
 import './navbar.scss';
 import { AiOutlineClose, AiFillHome, AiOutlineSetting, AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { BiMoviePlay } from 'react-icons/bi'
@@ -8,10 +8,12 @@ import { ThemeContext } from '../../Hooks/ThemeContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { ImBlog } from 'react-icons/im'
 import { Link } from 'react-router-dom';
-import i18n from '../../Services/language'
+import { useTranslation } from 'react-i18next';
+import i18n from '../../loc/i18n';
 
 const Navbar: React.FC = () => {
     const { theme } = useContext(ThemeContext);
+    const {t} = useTranslation();
     const [isChecked, setIsChecked] = useState<boolean>(false);
     const [language, setLanguage] = useState<string>("English");
     const [isOpen, setOpen] = useState(false);
@@ -20,7 +22,6 @@ const Navbar: React.FC = () => {
         { id: 1, isOpen: false },
         { id: 2, isOpen: false },
         { id: 3, isOpen: false }
-
     ]);
 
     const handleDropdownClick = (id: number) => {
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
                 <AiOutlineClose onClick={handleSidebar} size={35} className="closeBtn" />
                 <div >
                     <ul className='items'>
-                        <li className='item'> <Link to={'/'} className='link'><AiFillHome className="icons" size={25} />Home</Link></li>
+                        <li className='item'> <Link to={'/'} className='link'><AiFillHome className="icons" size={25} />{t('Home')}</Link></li>
                         <li className='item' onClick={() => handleDropdownClick(1)}>
                             <ImBlog className="icons" size={25} />Blogs
                             {buttons[0].isOpen ? <AiOutlineArrowUp size={15} className='arrow' /> : <AiOutlineArrowDown size={15} className='arrow' />}
@@ -96,7 +97,7 @@ const Navbar: React.FC = () => {
                         }
                         <li className='item'><Link to={'TimeLine'} className='link'><MdUpdate className="icons" size={25} />Updates</Link></li>
                         <li className='item' onClick={() => handleDropdownClick(2)}>
-                            <AiOutlineSetting className="icons" size={25} />Settings
+                            <AiOutlineSetting className="icons" size={25} />{t('Settings')}
                             {buttons[1].isOpen ? <AiOutlineArrowUp size={15} className='arrow'/> : <AiOutlineArrowDown size={15} className='arrow'/>}
                         </li>
                         {

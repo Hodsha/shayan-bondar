@@ -1,26 +1,17 @@
 .sidebar {
-    // background-image: linear-gradient(45deg,
-    //         hsl(0deg 0% 0%) 0%,
-    //         hsl(249deg 100% 6%) 11%,
-    //         hsl(252deg 94% 7%) 22%,
-    //         hsl(251deg 80% 7%) 33%,
-    //         hsl(250deg 68% 8%) 44%,
-    //         hsl(248deg 59% 9%) 56%,
-    //         hsl(246deg 51% 10%) 67%,
-    //         hsl(243deg 46% 11%) 78%,
-    //         hsl(241deg 42% 12%) 89%,
-    //         hsl(240deg 40% 12%) 100%);
+    // background-image: linear-gradient(to bottom, #031632, #002137, #00292d, #002f1b, #243208);
+    // background-image: linear-gradient(to right bottom, #031632, #00253b, #003135, #003b24, #334115);
     background-image: linear-gradient(45deg,
-            hsl(0deg 100% 17%) 0%,
-            hsl(353deg 100% 18%) 0%,
-            hsl(346deg 100% 18%) -1%,
-            hsl(340deg 100% 18%) 0%,
-            hsl(333deg 100% 18%) 0%,
-            hsl(324deg 100% 17%) 2%,
-            hsl(311deg 100% 16%) 5%,
-            hsl(293deg 100% 15%) 9%,
-            hsl(272deg 100% 18%) 19%,
-            hsl(240deg 100% 20%) 99%);
+            hsl(281deg 88% 9%) 0%,
+            hsl(271deg 88% 12%) 11%,
+            hsl(264deg 89% 14%) 22%,
+            hsl(260deg 89% 15%) 33%,
+            hsl(256deg 89% 17%) 44%,
+            hsl(253deg 89% 18%) 56%,
+            hsl(250deg 90% 20%) 67%,
+            hsl(248deg 90% 21%) 78%,
+            hsl(245deg 90% 22%) 89%,
+            hsl(243deg 90% 23%) 100%);
     height: 100%;
     width: 15rem;
     z-index: 999;
@@ -118,11 +109,9 @@
     color: red;
 }
 
-.arrow{
+.arrow {
     display: inline;
     margin-left: 5px;
 }
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}

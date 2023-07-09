@@ -6,7 +6,7 @@ export interface IMovie{
     Title: string, 
     Rating: number,
     Genre: string,
-    Minute: number,
+    Minutes: number,
     Synopsis: string,
     Imdb: string,
     Youtube: string
