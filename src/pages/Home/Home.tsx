@@ -2,19 +2,20 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import './home.scss';
 import Loader from '../../components/Loader/Loader';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Home() {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
+    const {t} = useTranslation();
     return (
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
             <div id="bodyStyle" >
                 <div className="gradient">
                     <section>
-                        <h2 className="text-4xl">Who is this guy?</h2>
-                        <p>Hello there! I'm Shayan, an aspiring web developer from germany.
-                        </p>
+                        <h2 className="text-4xl">{t('homeTitle1')}</h2>
+                        <p>{t('introduction')}</p>
                     </section>
                     <section>
                         <h2 className="text-3xl">About Me</h2><br />

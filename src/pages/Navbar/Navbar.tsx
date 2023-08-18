@@ -3,7 +3,7 @@ import './navbar.scss';
 import { AiOutlineClose, AiFillHome, AiOutlineSetting, AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { BiMoviePlay } from 'react-icons/bi'
 import { RxHamburgerMenu } from 'react-icons/rx';
-import {  MdUpdate } from 'react-icons/md';
+import {  MdOutlineGames, MdUpdate } from 'react-icons/md';
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { ImBlog } from 'react-icons/im'
@@ -90,8 +90,8 @@ const Navbar: React.FC = () => {
                         {
                             buttons[0].isOpen && (
                                 <ul className='subitems'>
-                                    <li className='subitem'><Link to={'/Movie'} className='link'><BiMoviePlay className="sub_icons" size={25} />Movie</Link></li>
-                                    {/* <li className='subitem'><a href="" className='link'><MdOutlineGames className="sub_icons" size={25} />Games</a></li> */}
+                                    <li className='subitem'><Link to={'/Movie'} className='link'><BiMoviePlay className="sub_icons" size={25} />{t('Movie')}</Link></li>
+                                    <li className='subitem'><Link to={'/Game'} className='link'><MdOutlineGames className="sub_icons" size={25} />{t('Game')}</Link></li>
                                 </ul>
                             )
                         }
