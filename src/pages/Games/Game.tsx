@@ -52,7 +52,7 @@ export default function Game() {
                 <h4 id='directorHeader'>
                   Publisher: Rockstar Games
                 </h4>
-                <div id='header2'>
+                <div id=''>
                   <span className="minutes">Release: 2013</span>
                   <p className="type">Genres: Open-World, Action-Adventure </p>
                 </div>
