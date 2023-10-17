@@ -6,7 +6,7 @@ const TimeLine = () => {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
     const {t} = useTranslation();
-
+//ToDo create component and a loop for the updates
     return (
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode ? 'text-white' : 'text-black'} h-screen`}>
             <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}`}>
