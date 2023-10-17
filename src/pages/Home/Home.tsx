@@ -7,8 +7,8 @@ export default function Home() {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
     const {t} = useTranslation();
+    
     return (
-        
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
             <div id="bodyStyle" >
                 <div className="gradient">
@@ -37,7 +37,6 @@ export default function Home() {
 
                         <h3 className="superscription">{t('GoalsQues.')}</h3>
                         <p className="space-maker"><br />{t('Goals')} <br />
-
 
                         </p>
                         <h3 className="superscription">{t('MusicQues.')}</h3><br />
