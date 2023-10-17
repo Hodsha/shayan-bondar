@@ -9,17 +9,19 @@ import Games from './pages/Games/Games'
 
 function App() {
   return (
-    <ThemeProvider>
+   
       <HashRouter>
-          <Navbar />
+        <ThemeProvider>
+          <Navbar />          
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Movie' element={<Movie />} />
             <Route path='/Games' element={<Games />}/>
             <Route path='/TimeLine' element={<TimeLine />} />
           </Routes>
+          </ThemeProvider>
       </HashRouter>
-    </ThemeProvider>
+   
   )
 }
 

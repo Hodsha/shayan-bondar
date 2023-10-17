@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import './home.scss';
-import Loader from '../../components/Loader/Loader';
 import { useTranslation } from 'react-i18next';
 
 
@@ -14,7 +13,7 @@ export default function Home() {
             <div id="bodyStyle" >
                 <div className="gradient">
                     <section>
-                        <h2 className="text-4xl">{t('HomeTitle1')}</h2>
+                        <h2 className="text-4xl">{t('HomeTitle')}</h2>
                         <br />
                         <p>{t('Introduction')}</p>
                     </section>
@@ -28,9 +27,8 @@ export default function Home() {
 
                         <h3 className="superscription">{t('DogQues.')}</h3><br />
                         <p className="space-maker">
-                        {t('Scar')}<br /> <br />
+                        {t('Scar')}<br /> 
                         </p>
-                        <br /> <br />
                         {/* <h3 className="superscription">{t('Goal')}</h3><br />
                         <p className="space-maker">well i can answer that quickly. just check out my page where i introduce you my favorite movies and series<br /> <br /> </p> */}
 
@@ -43,7 +41,7 @@ export default function Home() {
 
                         </p>
                         <h3 className="superscription">{t('MusicQues.')}</h3><br />
-                        <p>{t('Music')}</p><br /><br /><br /><br /><br />
+                        <p>{t('Music')}</p>
                     </section>
                 </div>
             </div>
