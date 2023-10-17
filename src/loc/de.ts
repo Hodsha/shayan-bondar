@@ -2,6 +2,7 @@ const deTranslations = {
   //Sidebar
   "Home": "Startseite",
   "Movie": "Filme",
+  "Updates": "Aktualisierungen",
   "Settings": "Einstellungen",
   "Game": "Spiele",
 

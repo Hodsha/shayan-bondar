@@ -1,6 +1,7 @@
 const enTranslations = {
   "Home": "Home",
   "Movie": "Movies",
+  "Updates": "Updates",
   "Settings": "Settings",
   "Game": "Games",
 

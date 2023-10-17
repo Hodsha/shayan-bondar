@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
                                 </ul>
                             )
                         }
-                        <li className='item'><Link to={'TimeLine'} className='link'><MdUpdate className="icons" size={25} />Updates</Link></li>
+                        <li className='item'><Link to={'TimeLine'} className='link'><MdUpdate className="icons" size={25} />{t('Updates')}</Link></li>
                         <li className='item' onClick={() => handleDropdownClick(2)}>
                             <AiOutlineSetting className="icons" size={25} />{t('Settings')}
                             {buttons[1].isOpen ? <AiOutlineArrowUp size={15} className='arrow'/> : <AiOutlineArrowDown size={15} className='arrow'/>}
