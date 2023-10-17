@@ -4,7 +4,7 @@ import { ThemeProvider } from './Hooks/ThemeContext'
 import TimeLine from './pages/Updates/TimeLine'
 import Movie from './pages/Movies/Movie'
 import Home from './pages/Home/Home'
-import Game from './pages/Games/Game'
+import Games from './pages/Games/Games'
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Movie' element={<Movie />} />
-            <Route path='/Game' element={<Game />}/>
+            <Route path='/Games' element={<Games />}/>
             <Route path='/TimeLine' element={<TimeLine />} />
           </Routes>
       </HashRouter>

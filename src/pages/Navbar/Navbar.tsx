@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
                             buttons[0].isOpen && (
                                 <ul className='subitems'>
                                     <li className='subitem'><Link to={'/Movie'} className='link'><BiMoviePlay className="sub_icons" size={25} />{t('Movie')}</Link></li>
-                                    <li className='subitem'><Link to={'/Game'} className='link'><MdOutlineGames className="sub_icons" size={25} />{t('Game')}</Link></li>
+                                    <li className='subitem'><Link to={'/Games'} className='link'><MdOutlineGames className="sub_icons" size={25} />{t('Game')}</Link></li>
                                 </ul>
                             )
                         }

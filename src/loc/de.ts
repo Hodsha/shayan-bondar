@@ -20,9 +20,6 @@ const deTranslations = {
   "Goals": "Ich will mich immer verbessern, sei es im Sport, beim Programmieren oder allgemein im Leben.",
   "MusicQues.": "Welche Art von Musik hörst du?",
   "Music": "Ich höre mir alles an. Es gibt kein schlechtes Genre. Es hängt einfach von meiner Stimmung oder dem Ort ab.",
-
-  
-
 }
 
 export default deTranslations;

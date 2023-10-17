@@ -1,4 +1,5 @@
 const enTranslations = {
+  //Header
   "Home": "Home",
   "Movie": "Movies",
   "Updates": "Updates",
@@ -19,9 +20,6 @@ const enTranslations = {
   "Goals": "I always want to improve. whether in sports, coding or general in life.",
   "MusicQues.": "What type of music do you listen to?",
   "Music": "I listen to everything. There is no bad genre. It just depends on my mood or the location"
-
-
-
 };
 
 export default enTranslations;
