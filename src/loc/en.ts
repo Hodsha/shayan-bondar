@@ -19,7 +19,12 @@ const enTranslations = {
   "GoalsQues.": "Goals:",
   "Goals": "I always strive for improvement, whether in sports, coding, or life in general.",
   "MusicQues.": "Music Preferences:",
-  "Music": "I enjoy listening to a wide range of genres. There's no such thing as a bad genre—it all depends on my mood or the setting."
+  "Music": "I enjoy listening to a wide range of genres. There's no such thing as a bad genre—it all depends on my mood or the setting.",
+
+  //Updates
+  "26062023": "I have revamped my website, incorporating new features such as the ability to switch between German and English languages, as well as a dark mode option. Additionally, I've introduced new sections like a timeline. Furthermore, my entire website is now responsive. I also have several exciting ideas for future improvements, so stay tuned!",
+  "08072023": "The movie site is fixed now. The responsive mobile view didn't work properly; the swipe arrows jumped up and down while I clicked on them, so I had to fix the position and add a new div to it.",
+  "17102023": "I have updated and corrected the language on the home page, updates and in the navigation bar. I also adjusted the line spacing.",  
 };
 
 export default enTranslations;
