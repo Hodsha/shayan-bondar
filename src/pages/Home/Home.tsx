@@ -3,12 +3,12 @@ import { ThemeContext } from '../../Hooks/ThemeContext';
 import './home.scss';
 import { useTranslation } from 'react-i18next';
 
-
 export default function Home() {
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
     const {t} = useTranslation();
     return (
+        
         <div className={`${darkMode ? 'bg-slate-950' : 'bg-white'}  ${darkMode?'text-white' : 'text-black'}`}>
             <div id="bodyStyle" >
                 <div className="gradient">
@@ -19,7 +19,7 @@ export default function Home() {
                     </section>
                     <section>
                         <h2 className="text-3xl">{t('AboutMe')}</h2><br />
-
+            
                         <h3 className="text-4xl">{t('CodingSkills')}</h3><br />
                         <p className="space-maker">{t('AboutCoding')}</p>
                         <h3 className="superscription">{t('SportQues.')}</h3><br />

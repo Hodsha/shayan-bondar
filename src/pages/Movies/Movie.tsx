@@ -8,14 +8,10 @@ import { getMovies } from '../../Repository/phpDataBase/phpDatabase';
 import { IMovie } from '../../entities/IMovie';
 import Loader from '../../components/Loader/Loader';
 
-
-
-
-
 const Movie: React.FC = () => {
     const [movie, setMovie] = useState<IMovie[]>([]);
     const [currentCardIndex, setCurrentCardIndex] = useState(movie.length);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [Data, setData] = useState(true);
     const currentCard = movie[currentCardIndex];
     const { theme } = useContext(ThemeContext);
@@ -26,13 +22,14 @@ const Movie: React.FC = () => {
         getMovies().then((res: IMovie | any) => {
             const timer = setTimeout(() => {
                 setMovie(res);
-                setIsLoading(false);
+                setIsLoading(true);
                 setData(false);
             }, 2000);
             return () => clearTimeout(timer);
-        }).catch((error: any) => {
+        })
+        .catch((error: any) => {
             console.error(error);
-            setIsLoading(false);
+            setIsLoading(true);
         })
 
     }, [])
@@ -44,7 +41,7 @@ const Movie: React.FC = () => {
     const handleSwipeRight = () => {
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % movie.length);
     };
-    if (isLoading) {
+    if (!isLoading) {
 
         return <Loader />;
     }

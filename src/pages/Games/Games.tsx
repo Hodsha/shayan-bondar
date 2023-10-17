@@ -30,7 +30,8 @@ const Games: React.FC = () => {
                 setData(false);
             }, 2000);
             return () => clearTimeout(timer);
-        }).catch((error: any) => {
+        })
+        .catch((error: any) => {
             console.error(error);
             setIsLoading(false);
         })
