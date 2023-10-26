@@ -4,13 +4,9 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { ThemeContext } from '../../Hooks/ThemeContext';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import { SiImdb } from 'react-icons/si';
-import { getMovies } from '../../Repository/phpDataBase/phpDatabase';
+import { getGames} from '../../Repository/phpDataBase/phpDatabase';
 import { IMovie } from '../../entities/IMovie';
 import Loader from '../../components/Loader/Loader';
-
-
-
-
 
 const Games: React.FC = () => {
     const [movie, setMovie] = useState<IMovie[]>([]);
@@ -23,7 +19,7 @@ const Games: React.FC = () => {
 
     useEffect(() => {
         new Promise(resolve => setTimeout(resolve, 2000));
-        getMovies().then((res: IMovie | any) => {
+        getGames().then((res: IMovie | any) => {
             const timer = setTimeout(() => {
                 setMovie(res);
                 setIsLoading(false);
@@ -35,7 +31,6 @@ const Games: React.FC = () => {
             console.error(error);
             setIsLoading(false);
         })
-
     }, [])
 
     const handleSwipeLeft = () => {

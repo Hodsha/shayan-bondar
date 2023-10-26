@@ -15,7 +15,7 @@ export function getMovies(): Promise<IMovie> {
 
 export function getGames(): Promise<any> {
     return new Promise<any>((resolve, reject) => {
-        axios.get("").then((response: any) => {
+        axios.get(Constants.localGameDatabase).then((response: any) => {
             resolve(response.data);
         })
         .catch((error) => {
@@ -24,13 +24,13 @@ export function getGames(): Promise<any> {
     })
 }
 
-export function getTimeline(): Promise<any>{
-    return new Promise<any>((resolve, reject) => {
-        axios.get("").then((response: any) => {
-            resolve(response.data);
-        })
-        .catch((error) => {
-            reject(error);
-        })
-    })
-}
+// export function getTimeline(): Promise<any>{
+//     return new Promise<any>((resolve, reject) => {
+//         axios.get("").then((response: any) => {
+//             resolve(response.data);
+//         })
+//         .catch((error) => {
+//             reject(error);
+//         })
+//     })
+// }
