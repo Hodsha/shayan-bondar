@@ -1,13 +1,11 @@
-export interface IMovie{
+export interface IGame{
     ID: number;
     Image: string, 
-    ReleaseDate: string,
-    Director: string,
+    ReleaseYear: string,
+    Publisher: string,
     Title: string, 
     Rating: number,
     Genre: string,
-    Minutes: number,
     Synopsis: string,
-    Imdb: string,
     Youtube: string
 }

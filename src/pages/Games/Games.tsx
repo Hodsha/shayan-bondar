@@ -5,26 +5,26 @@ import { ThemeContext } from '../../Hooks/ThemeContext';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import { SiImdb } from 'react-icons/si';
 import { getGames} from '../../Repository/phpDataBase/phpDatabase';
-import { IMovie } from '../../entities/IMovie';
 import Loader from '../../components/Loader/Loader';
+import { IGame } from '../../entities/IGame';
 
 const Games: React.FC = () => {
-    const [movie, setMovie] = useState<IMovie[]>([]);
-    const [currentCardIndex, setCurrentCardIndex] = useState(movie.length);
+    const [game, setGame] = useState<IGame[]>([]);
+    const [currentCardIndex, setCurrentCardIndex] = useState(game.length);
     const [isLoading, setIsLoading] = useState(true);
     const [Data, setData] = useState(true);
-    const currentCard = movie[currentCardIndex];
+    const currentCard = game[currentCardIndex];
     const { theme } = useContext(ThemeContext);
     const { darkMode } = theme;
 
     useEffect(() => {
         new Promise(resolve => setTimeout(resolve, 2000));
-        getGames().then((res: IMovie | any) => {
+        getGames().then((res: IGame | any) => {
             const timer = setTimeout(() => {
-                setMovie(res);
+                setGame(res);
                 setIsLoading(false);
                 setData(false);
-            }, 2000);
+            }, 500);
             return () => clearTimeout(timer);
         })
         .catch((error: any) => {
@@ -34,11 +34,11 @@ const Games: React.FC = () => {
     }, [])
 
     const handleSwipeLeft = () => {
-        setCurrentCardIndex((prevIndex) => prevIndex === 0 ? movie.length - 1 : prevIndex - 1);
+        setCurrentCardIndex((prevIndex) => prevIndex === 0 ? game.length - 1 : prevIndex - 1);
     };
 
     const handleSwipeRight = () => {
-        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % movie.length);
+        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % game.length);
     };
     if (isLoading) {
 
@@ -63,10 +63,10 @@ const Games: React.FC = () => {
                                 />
                                 <h1 id='movie_title'>{currentCard.Title}</h1>
                                 <h4 id='directorHeader'>
-                                    {currentCard.Director}, {currentCard.ReleaseDate}
+                                    {currentCard.Publisher}, {currentCard.ReleaseYear}
                                 </h4>
                                 <div id='header2'>
-                                    <span className="minutes">{currentCard.Minutes} min</span>
+                           
                                     <p className="type">{currentCard.Genre}</p>
                                 </div>
                             </div>
@@ -84,14 +84,8 @@ const Games: React.FC = () => {
                                         <AiOutlineYoutube
                                             size={40}
                                             color='white'
-                                        />
-                                    </a>
-                                    <a href={currentCard.Imdb} target="_blank" className='ml-6'>
-                                        <SiImdb
-                                            size={40}
-                                            color='white'
-                                        />
-                                    </a>
+                                            />
+                                    </a>                     
                                 </div>
                             </div>
 
@@ -99,7 +93,7 @@ const Games: React.FC = () => {
                     </div>
                     <div className='arrow_design'>
                         <AiOutlineArrowLeft onClick={handleSwipeLeft} size={50} className='leftArrow' />
-                        {currentCard.ID}/{movie.length}
+                        {currentCard.ID}/{game.length}
                         <AiOutlineArrowRight onClick={handleSwipeRight} size={50} className='rightArrow' />
                     </div>
                 </div>

@@ -41,6 +41,7 @@ const Movie: React.FC = () => {
     const handleSwipeRight = () => {
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % movie.length);
     };
+    
     if (!isLoading) {
 
         return <Loader />;
